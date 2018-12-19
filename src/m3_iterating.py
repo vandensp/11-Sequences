@@ -129,7 +129,7 @@ def count_negatives(seq):
 def run_test_count_short_ones():
     """ Tests the   count_short_ones   function. """
     # -------------------------------------------------------------------------
-    # TODO: 4. Implement this TEST function.
+    # Done: 4. Implement this TEST function.
     #   It TESTS the  count_short_ones  function defined below.
     #   Include at least ** 2 ** ADDITIONAL tests beyond those we wrote.
     #
@@ -203,13 +203,28 @@ def run_test_count_short_ones():
     print('       actual:  ', actual)
 
     # -------------------------------------------------------------------------
-    # TODO 4 (continued):  Add your 2 ADDITIONAL test(s) here:
+    # Done 4 (continued):  Add your 2 ADDITIONAL test(s) here:
     # -------------------------------------------------------------------------
 
+    # Test 8:
+    expected = 2
+    seq = [[1, 1, 1], [1, 1, 1], [-9302, -1], [0, 0]]
+    actual = count_short_ones(seq)
+    print()
+    print('Test 8 expected:', expected)
+    print('       actual:  ', actual)
+
+    # Test 9:
+    expected = 2
+    seq = [[1, 1, 1], [1, 1], [1, 230951, 1], [192049583, 235093]]
+    actual = count_short_ones(seq)
+    print()
+    print('Test 9 expected:', expected)
+    print('       actual:  ', actual)
 
 def count_short_ones(seq_of_lists):
     """
-    What comes in:  An sequence of sequences.
+    What comes in:  A sequence of sequences.
     What goes out:  Returns the number of sub-sequences in the given
       sequence whose length is less than 3.
     Side effects:   None.
@@ -228,10 +243,14 @@ def count_short_ones(seq_of_lists):
       :type seq_of_lists: (list | tuple) of (list | tuple | str)
     """
     # ------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # Done: 5. Implement and test this function.
     #   Note that you should write its TEST function first (above).
-    # ------------------------------------------------------------------
-
+    # -------------------------------------------------------------------
+    count = 0
+    for k in range (len(seq_of_lists)):
+        if len(seq_of_lists[k]) < 3:
+            count = count + 1
+    return count
 
 def run_test_draw_circles():
     """ Tests the   draw_circles   function. """
@@ -309,9 +328,14 @@ def draw_circles(window, points, radius, color):
       :type color: str
     """
     # -------------------------------------------------------------------------
-    # TODO: 6. Implement and test this function.
+    # Done: 6. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
+    for k in range (len(points)):
+        circle = rg.Circle(points[k], radius)
+        circle.fill_color = color
+        circle.attach_to(window)
+    window.render()
 
 
 # -----------------------------------------------------------------------------
