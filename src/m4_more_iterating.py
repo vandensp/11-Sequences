@@ -36,8 +36,8 @@ def main():
     """ Calls the   TEST   functions in this module. """
     #run_test_sum_sequence()
     #run_test_count_items_bigger_than()
-    run_test_count_positive_sines()
-    # run_test_sum_first_n()
+    #run_test_count_positive_sines()
+    run_test_sum_first_n()
 
 
 def run_test_sum_sequence():
@@ -647,14 +647,14 @@ def run_test_sum_first_n():
     expected = -115
     actual = sum_first_n([-48, -10, -50, -5, -2], 5)
     print()
-    print('Test 5 expected:', expected)
+    print('Test 8 expected:', expected)
     print('       actual:  ', actual)
 
     # Test 9:
-    expected = 88
+    expected = -88
     actual = sum_first_n([2, 3, -100, 7, -293], 4)
     print()
-    print('Test 5 expected:', expected)
+    print('Test 9 expected:', expected)
     print('       actual:  ', actual)
 
 
@@ -690,7 +690,7 @@ def sum_first_n(numbers, n):
     #         as an ORACLE in TESTING this function, however.
     # -------------------------------------------------------------------------
     total = 0
-    for k in range (n + 1):
+    for k in range (n):
         total = total + numbers[k]
     return total
 
