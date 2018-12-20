@@ -23,7 +23,7 @@ import rosegraphics as rg
 def main():
     """ Calls the   TEST   functions in this module. """
     # -------------------------------------------------------------------------
-    # TODO: 2.  EXAMINE the  4  sequences immediately below
+    # Done: 2.  EXAMINE the  4  sequences immediately below
     #   this comment, and READ the instructions that follows them.
     #
     # When you have examined the 4 sequences below and understand how
@@ -49,10 +49,10 @@ def main():
     #        RE-commenting out the previous test if you wish.
     # -------------------------------------------------------------------------
 
-    run_test_print_all_items_forwards(sequence1, sequence2, sequence3,
-                                      sequence4)
-    # run_test_print_all_items_backwards(sequence1, sequence2, sequence3,
-    #                                    sequence4)
+    #run_test_print_all_items_forwards(sequence1, sequence2, sequence3,
+    #                                  sequence4)
+    run_test_print_all_items_backwards(sequence1, sequence2, sequence3,
+                                        sequence4)
     # run_test_print_items_at_odd_indices(sequence1, sequence2, sequence3,
     #                                     sequence4)
     # run_test_print_items_in_second_half(sequence1, sequence2, sequence3,
@@ -368,9 +368,11 @@ def print_all_items_forwards(sequence):
        Point at (90, 25)
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # Done: 3. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
+    for k in range (len(sequence)):
+        print (sequence[k])
 
 
 ###############################################################################
@@ -390,10 +392,11 @@ def print_all_items_backwards(sequence):
        55
     """
     # -------------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # Done: 4. Implement and test this function.
     #          Tests have been written for you (above).
     # -------------------------------------------------------------------------
-
+    for k in range (-1, -len(sequence) - 1, -1):
+        print (sequence[k])
 
 ###############################################################################
 # Iterating through PART of a sequence:
